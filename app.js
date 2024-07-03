@@ -23,7 +23,7 @@ app.get('/about', (req, res) => {
 
 // Handle non-existent routes
 app.use((req, res, next) => {
-  const error = new Error('Not Found');
+  const error = new Error('404 Not Found');
   error.status = 404;
   next(error);
 });
